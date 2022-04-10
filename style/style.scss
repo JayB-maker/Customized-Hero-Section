@@ -1,0 +1,208 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: 0;
+    border: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+:root{
+    --primary-color: #ff4800;
+    --color-black: #000;
+    --color-white: #fff;
+    --color-grey: #737373;
+    --text-color: #242426;
+
+    --container-lg: 82%;
+    --container-md: 88%;
+    --container-sm: 95%;
+
+    --transition: 400ms;
+}
+
+body{
+    font-family: 'Open Sans', sans-serif;
+    color: var(--color-black);
+
+    a{
+        color: var(--color-white);
+
+        &:hover{
+            opacity: 90%;
+        }
+    }
+
+    .btn{
+        color: var(--color-black);
+        padding: 0.5rem 0.9rem;
+        border: 1px solid var(--color-black);
+        border-radius: 0.2rem;
+        background: var(--color-white);
+        transition: var(--transition);
+
+        &:hover{
+            background: var(--color-black);
+            border: transparent;
+            color: var(--color-white);
+        }
+    }
+
+    .btn-primary{
+        color: var(--color-white);
+        padding: 0.5rem 0.9rem;
+        border: 1px solid transparent;
+        border-radius: 0.2rem;
+        background: var(--primary-color);
+        transition: var(--transition);
+
+        &:hover{
+            background: var(--color-white);
+            border: 1px solid var(--primary-color);
+            color: var(--primary-color);
+        }
+    }
+
+    .container{
+        width: var(--container-lg);
+        margin: 0 auto;
+    }
+
+    nav{
+        width: 100vw;
+        height: 4.5rem;
+        background-color: #000;
+
+        .container{
+            height: 100%;
+            display: flex;
+            align-items: center;
+            place-content: space-between;
+
+            .logo{
+                a{
+                    font-size: 1.5rem;
+                    font-weight: bold;
+                }
+            }
+
+            .navigation{
+                ul{
+                    width: 20rem;
+                    display: flex;
+                    flex: 1;
+                    align-items: center;
+                    place-content: space-between;
+
+                    li{
+                        a{
+                            font-size: 0.8rem;
+                        }
+                    }
+                }
+            }
+
+            .primary-navigation{
+                ul{
+                    width: 9rem;
+                    display: flex;
+                    flex: 1;
+                    align-items: center;
+                    place-content: space-between;
+
+                    li{
+                        a{
+                            font-size: 0.8rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    /*-------------------------------Hero-Section---------------------------*/
+
+    header{
+        width: 100vw;
+        height: calc(100vh - 4.5rem);
+        overflow: hidden;
+
+        .container{
+            display: flex;
+            align-items: center;
+            gap: auto;
+
+            .left-colon{
+                width: 30rem;
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+
+                small{
+                    color: var(--color-grey);
+                    font-size: 0.8rem;
+                }
+
+                h1{
+                    font-weight: 800;
+                    font-size: 2.8rem;
+                    line-height: 3.5rem;
+                    color: var(--text-color);
+                }
+
+                p{
+                    color: var(--color-grey);
+                    font-size: 0.9rem;
+                    width: 23rem;
+                    line-height: 1.5rem;
+                    font-weight: 600;
+                    margin-bottom: 0.5rem;
+                }
+
+                .hero-cta{
+                    display: flex;
+                    flex: 1;
+                    gap: 0.5rem;
+                    align-items: center;
+
+                    .btn, .btn-primary{
+                        padding: 0.5rem 2rem;
+                    }
+                }
+
+            }
+
+            .right-colon{
+                width: 30rem;
+                height: 100%;
+                position: relative;
+
+                .big-circle{
+                    position: absolute;
+                    top: -10rem;
+                    right: -30rem;
+                    content: '';
+                    border-radius: 50%;
+                    background-color: var(--primary-color);
+                    height: 50rem;
+                    aspect-ratio: 1/1;
+                }
+
+                .small-circle{
+                    position: absolute;
+                    //top: 0;
+                    content: '';
+                    border-radius: 50%;
+                    background-color: var(--color-white);
+                    height: 30rem;
+                    aspect-ratio: 1/1;
+                }
+
+                img{
+                    height: 30rem;
+                }
+            }
+        }
+    }
+}
