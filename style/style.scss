@@ -227,3 +227,167 @@ body{
         }
     }
 }
+
+@media screen and (max-width: 1024px) {
+    body{
+        header{
+            position: relative;
+            top: 0rem;
+            overflow: hidden;
+            height: 50vh;
+            display: flex;
+            align-items: center;
+
+            .container{
+                width: var(--container-md);
+                margin: 0 auto;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                place-content: space-between;
+
+                .left-colon{
+                    margin-top: -10rem;
+                }
+
+                .right-colon{
+                    top: -10rem;
+                    position: relative;
+
+                    .big-circle{
+                        position: relative;
+                        height: 100%;
+
+                        .small-circle{
+                            position: absolute;
+                            height: 50%;
+                            z-index: 3;
+                            background: red;
+                        }
+
+                        .hero-picture{
+                            position: absolute;
+                            img{
+                                position: unset;
+    
+                            }
+                        }
+                    }
+                }
+    
+    
+                .hero-picture{
+                    width: 50rem;
+                    position: relative;
+                    img{
+                        display: flex;
+                        position: absolute;
+                        left: -10rem;
+                    }
+                }
+            }
+        }
+        
+    }
+}
+
+@media screen and (max-width: 600px) {
+    body{
+        margin: 0;
+        padding: 0;
+        nav{
+            //margin-bottom: 10rem;
+            display: block;
+            .container{
+                width: var(--container-sm);
+                margin: 0 auto;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                .logo{
+                    margin-top: 1rem;
+                    a{
+                        text-align: center;
+                    }
+                }
+
+                .navigation{
+                    display: none;
+                }
+
+                .primary-navigation{
+                    display: none;
+                }
+            }
+        }
+
+        header{
+            display: block;
+            text-align: left;
+            height: calc(100vh - 4.5rem);
+            position: unset;
+            overflow: hidden;
+            //align-items: center;
+            
+            .container{
+                top: 12rem;
+                position: relative;
+                width: var(--container-sm);
+                margin: 0 auto;
+                display: flex;
+                height: 100%;
+                flex-direction: column;
+                align-items: center;
+
+
+                .left-colon{
+                    gap: 1.5rem;
+                    width: 100%;
+
+                    small{
+                        font-size: 1.2rem;
+                    }
+
+                    h1{
+                        width: 95%;
+                        font-size: 2.8rem;
+                    }
+
+                    p{
+                        font-size: 1.2rem;
+                        width: 80%;
+                        line-height: 1.5;
+                    }
+                }
+
+                .right-colon{
+                    margin-top: -10rem;
+                    .big-circle{
+                        height: 150%;
+
+                        .small-circle{
+                            position: absolute;
+                            height: 100%;
+                            top: 7rem;
+                            z-index: 10;
+                            //background: white;
+                        }
+
+                        .hero-picture{
+                            img{
+                                position: relative;
+                                height: 25rem;
+                                bottom: -3rem;
+                                top: unset;
+                                left: 7rem;
+                                right: 5rem;
+                            }
+                        }
+                    }
+                }
+            }
+            
+
+        }
+    }
+}

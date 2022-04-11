@@ -256,4 +256,164 @@ body header .container .right-colon .big-circle .hero-picture img {
   -webkit-filter: grayscale(90%);
           filter: grayscale(90%);
 }
+
+@media screen and (max-width: 1024px) {
+  body header {
+    position: relative;
+    top: 0rem;
+    overflow: hidden;
+    height: 50vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  body header .container {
+    width: var(--container-md);
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    place-content: space-between;
+  }
+  body header .container .left-colon {
+    margin-top: -10rem;
+  }
+  body header .container .right-colon {
+    top: -10rem;
+    position: relative;
+  }
+  body header .container .right-colon .big-circle {
+    position: relative;
+    height: 100%;
+  }
+  body header .container .right-colon .big-circle .small-circle {
+    position: absolute;
+    height: 50%;
+    z-index: 3;
+    background: red;
+  }
+  body header .container .right-colon .big-circle .hero-picture {
+    position: absolute;
+  }
+  body header .container .right-colon .big-circle .hero-picture img {
+    position: unset;
+  }
+  body header .container .hero-picture {
+    width: 50rem;
+    position: relative;
+  }
+  body header .container .hero-picture img {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: absolute;
+    left: -10rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    margin: 0;
+    padding: 0;
+  }
+  body nav {
+    display: block;
+  }
+  body nav .container {
+    width: var(--container-sm);
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  body nav .container .logo {
+    margin-top: 1rem;
+  }
+  body nav .container .logo a {
+    text-align: center;
+  }
+  body nav .container .navigation {
+    display: none;
+  }
+  body nav .container .primary-navigation {
+    display: none;
+  }
+  body header {
+    display: block;
+    text-align: left;
+    height: calc(100vh - 4.5rem);
+    position: unset;
+    overflow: hidden;
+  }
+  body header .container {
+    top: 12rem;
+    position: relative;
+    width: var(--container-sm);
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  body header .container .left-colon {
+    gap: 1.5rem;
+    width: 100%;
+  }
+  body header .container .left-colon small {
+    font-size: 1.2rem;
+  }
+  body header .container .left-colon h1 {
+    width: 95%;
+    font-size: 2.8rem;
+  }
+  body header .container .left-colon p {
+    font-size: 1.2rem;
+    width: 80%;
+    line-height: 1.5;
+  }
+  body header .container .right-colon {
+    margin-top: -10rem;
+  }
+  body header .container .right-colon .big-circle {
+    height: 150%;
+  }
+  body header .container .right-colon .big-circle .small-circle {
+    position: absolute;
+    height: 100%;
+    top: 7rem;
+    z-index: 10;
+  }
+  body header .container .right-colon .big-circle .hero-picture img {
+    position: relative;
+    height: 25rem;
+    bottom: -3rem;
+    top: unset;
+    left: 7rem;
+    right: 5rem;
+  }
+}
 /*# sourceMappingURL=style.css.map */
