@@ -123,10 +123,18 @@ body{
 
     /*-------------------------------Hero-Section---------------------------*/
 
+    @keyframes animate {
+        to{
+            filter: hue-rotate(360deg);
+        }
+    }
+    
     header{
         width: 100vw;
         height: calc(100vh - 4.5rem);
         overflow: hidden;
+        display: flex;
+        align-items: center;
 
         .container{
             display: flex;
@@ -177,31 +185,44 @@ body{
                 width: 30rem;
                 height: 100%;
                 position: relative;
+                top: 12rem;
+                //overflow: hidden;
 
                 .big-circle{
-                    position: absolute;
-                    top: -10rem;
-                    right: -30rem;
+                    position: relative;
+                    top: 15rem;
+                    right: 0rem;
                     content: '';
                     border-radius: 50%;
                     background-color: var(--primary-color);
-                    height: 50rem;
+                    height: 100rem;
                     aspect-ratio: 1/1;
+                    animation: animate 15s ease infinite;
+
+                    .small-circle{
+                        position: absolute;
+                        top: 20rem;
+                        left: 20rem;
+                        content: '';
+                        border-radius: 50%;
+                        background-color: var(--color-white);
+                        height: 60rem;
+                        aspect-ratio: 1/1;
+                    }
+    
+                    .hero-picture{
+                        img{
+                            position: absolute;
+                            height: 35rem;
+                            top: 8rem;
+                            left: 10rem;
+                            z-index: 9;
+                            filter: grayscale(90%);
+                        }
+                    }
                 }
 
-                .small-circle{
-                    position: absolute;
-                    //top: 0;
-                    content: '';
-                    border-radius: 50%;
-                    background-color: var(--color-white);
-                    height: 30rem;
-                    aspect-ratio: 1/1;
-                }
-
-                img{
-                    height: 30rem;
-                }
+                
             }
         }
     }

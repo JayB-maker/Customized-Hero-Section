@@ -130,10 +130,30 @@ body nav .container .primary-navigation ul li a {
   font-size: 0.8rem;
 }
 
+@-webkit-keyframes animate {
+  to {
+    -webkit-filter: hue-rotate(360deg);
+            filter: hue-rotate(360deg);
+  }
+}
+
+@keyframes animate {
+  to {
+    -webkit-filter: hue-rotate(360deg);
+            filter: hue-rotate(360deg);
+  }
+}
+
 body header {
   width: 100vw;
   height: calc(100vh - 4.5rem);
   overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 body header .container {
@@ -200,29 +220,40 @@ body header .container .right-colon {
   width: 30rem;
   height: 100%;
   position: relative;
+  top: 12rem;
 }
 
 body header .container .right-colon .big-circle {
-  position: absolute;
-  top: -10rem;
-  right: -30rem;
+  position: relative;
+  top: 15rem;
+  right: 0rem;
   content: '';
   border-radius: 50%;
   background-color: var(--primary-color);
-  height: 50rem;
+  height: 100rem;
   aspect-ratio: 1/1;
+  -webkit-animation: animate 15s ease infinite;
+          animation: animate 15s ease infinite;
 }
 
-body header .container .right-colon .small-circle {
+body header .container .right-colon .big-circle .small-circle {
   position: absolute;
+  top: 20rem;
+  left: 20rem;
   content: '';
   border-radius: 50%;
   background-color: var(--color-white);
-  height: 30rem;
+  height: 60rem;
   aspect-ratio: 1/1;
 }
 
-body header .container .right-colon img {
-  height: 30rem;
+body header .container .right-colon .big-circle .hero-picture img {
+  position: absolute;
+  height: 35rem;
+  top: 8rem;
+  left: 10rem;
+  z-index: 9;
+  -webkit-filter: grayscale(90%);
+          filter: grayscale(90%);
 }
 /*# sourceMappingURL=style.css.map */
